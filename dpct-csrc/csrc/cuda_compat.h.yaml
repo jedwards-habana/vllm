@@ -1,0 +1,163 @@
+---
+MainSourceFile:  '/home/ubuntu/vllm/dpct-csrc/csrc/cuda_compat.h'
+Replacements:
+  - FilePath:        '/home/ubuntu/vllm/csrc/cuda_compat.h'
+    Offset:          0
+    Length:          0
+    ReplacementText: "#include <sycl/sycl.hpp>\n#include <dpct/dpct.hpp>\n"
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/ubuntu/vllm/csrc/cuda_compat.h'
+    Offset:          31
+    Length:          0
+    ReplacementText: "/* DPCT_ORIG   #define VLLM_LDG(arg) __ldg(arg)*/\n  /*\n  DPCT1098:82: The '*' expression is used instead of the __ldg call. These two expressions do not provide the exact same functionality. Check the generated code for potential precision and/or performance issues.\n  */\n  /*\n  DPCT1064:83: Migrated __ldg call is used in a macro/template definition and may not be valid for all macro/template uses. Adjust the code.\n  */\n"
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/ubuntu/vllm/csrc/cuda_compat.h'
+    Offset:          55
+    Length:          10
+    ReplacementText: '*(sin_ptr + x_index / 2)'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/ubuntu/vllm/csrc/cuda_compat.h'
+    Offset:          128
+    Length:          0
+    ReplacementText: "/* DPCT_ORIG   #define VLLM_SHFL_XOR_SYNC(var, lane_mask) __shfl_xor_sync(uint32_t(-1), var, lane_mask)*/\n  /*\n  DPCT1023:32: The SYCL sub-group does not support mask options for dpct::permute_sub_group_by_xor. You can specify \"--use-experimental-features=masked-sub-group-operation\" to use the experimental helper function to migrate __shfl_xor_sync.\n  */\n"
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/ubuntu/vllm/csrc/cuda_compat.h'
+    Offset:          173
+    Length:          45
+    ReplacementText: 'dpct::permute_sub_group_by_xor(item_ct1.get_sub_group(), var, lane_mask)'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/ubuntu/vllm/csrc/cuda_compat.h'
+    Offset:          322
+    Length:          0
+    ReplacementText: "/* DPCT_ORIG   #define VLLM_SHFL_SYNC(var, src_lane) __shfl_sync(uint32_t(-1), var, src_lane)*/\n  /*\n  DPCT1023:33: The SYCL sub-group does not support mask options for dpct::select_from_sub_group. You can specify \"--use-experimental-features=masked-sub-group-operation\" to use the experimental helper function to migrate __shfl_sync.\n  */\n"
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/ubuntu/vllm/csrc/cuda_compat.h'
+    Offset:          362
+    Length:          40
+    ReplacementText: 'dpct::select_from_sub_group(item_ct1.get_sub_group(), var, src_lane)'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/ubuntu/vllm/csrc/cuda_compat.h'
+    Offset:          496
+    Length:          0
+    ReplacementText: "  /*\n  DPCT1027:81: The call to cudaFuncSetAttribute was replaced with 0 because SYCL currently does not support corresponding setting.\n  */\n"
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/ubuntu/vllm/csrc/cuda_compat.h'
+    Offset:          572
+    Length:          0
+    ReplacementText: "/* DPCT_ORIG     cudaFuncSetAttribute(FUNC, cudaFuncAttributeMaxDynamicSharedMemorySize, VAL)*/ \\\n"
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/ubuntu/vllm/csrc/cuda_compat.h'
+    Offset:          576
+    Length:          76
+    ReplacementText: '0'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+MainSourceFilesDigest:
+  - MainSourceFile:  '/home/ubuntu/vllm/csrc/cuda_compat.h'
+    Digest:          f9a880c9f6fd9801d451d8ae9a972ab6
+DpctVersion:     2024.0.0
+MainHelperFileName: ''
+USMLevel:        ''
+FeatureMap:      {}
+CompileTargets:  {}
+OptionMap:
+  AnalysisScopePath:
+    Value:           '/home/ubuntu/vllm'
+    Specified:       false
+  AsyncHandler:
+    Value:           'false'
+    Specified:       false
+  CommentsEnabled:
+    Value:           'true'
+    Specified:       true
+  CompilationsDir:
+    Value:           '/home/ubuntu/vllm'
+    Specified:       true
+  CtadEnabled:
+    Value:           'false'
+    Specified:       false
+  EnablepProfiling:
+    Value:           'false'
+    Specified:       false
+  ExperimentalFlag:
+    Value:           '8'
+    Specified:       true
+  ExplicitClNamespace:
+    Value:           'false'
+    Specified:       false
+  ExplicitNamespace:
+    Value:           '20'
+    Specified:       false
+  ExtensionDDFlag:
+    Value:           '0'
+    Specified:       false
+  ExtensionDEFlag:
+    Value:           '4294967295'
+    Specified:       false
+  HelperFuncPreferenceFlag:
+    Value:           '0'
+    Specified:       false
+  NDRangeDim:
+    Value:           '3'
+    Specified:       false
+  NoDRYPattern:
+    Value:           'false'
+    Specified:       false
+  NoUseGenericSpace:
+    Value:           ''
+    Specified:       true
+  OptimizeMigration:
+    Value:           'false'
+    Specified:       false
+  ProcessAll:
+    Value:           'false'
+    Specified:       false
+  RuleFile:
+    Value:           ''
+    Specified:       false
+  SyclNamedLambda:
+    Value:           'false'
+    Specified:       false
+  UsmLevel:
+    Value:           '1'
+    Specified:       false
+...

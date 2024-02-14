@@ -1,0 +1,442 @@
+---
+MainSourceFile:  '/home/ubuntu/vllm/dpct-csrc/csrc/quantization/gptq/qdq_util.dp.hpp'
+Replacements:
+  - FilePath:        '/home/ubuntu/vllm/csrc/quantization/gptq/qdq_util.cuh'
+    Offset:          0
+    Length:          0
+    ReplacementText: "#include <sycl/sycl.hpp>\n#include <dpct/dpct.hpp>\n"
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/ubuntu/vllm/csrc/quantization/gptq/qdq_util.cuh'
+    Offset:          183
+    Length:          0
+    ReplacementText: "/* DPCT_ORIG     half2 as_half2;*/\n"
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/ubuntu/vllm/csrc/quantization/gptq/qdq_util.cuh'
+    Offset:          187
+    Length:          5
+    ReplacementText: 'sycl::half2'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/ubuntu/vllm/csrc/quantization/gptq/qdq_util.cuh'
+    Offset:          203
+    Length:          0
+    ReplacementText: "/* DPCT_ORIG     __device__ half2_uint32(uint32_t val) : as_uint32(val) {}*/\n"
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/ubuntu/vllm/csrc/quantization/gptq/qdq_util.cuh'
+    Offset:          207
+    Length:          11
+    ReplacementText: ''
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/ubuntu/vllm/csrc/quantization/gptq/qdq_util.cuh'
+    Offset:          265
+    Length:          0
+    ReplacementText: "/* DPCT_ORIG     __device__ half2_uint32(half2 val) : as_half2(val) {}*/\n"
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/ubuntu/vllm/csrc/quantization/gptq/qdq_util.cuh'
+    Offset:          269
+    Length:          11
+    ReplacementText: ''
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/ubuntu/vllm/csrc/quantization/gptq/qdq_util.cuh'
+    Offset:          293
+    Length:          5
+    ReplacementText: 'sycl::half2'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/ubuntu/vllm/csrc/quantization/gptq/qdq_util.cuh'
+    Offset:          371
+    Length:          0
+    ReplacementText: "/* DPCT_ORIG     half as_half;*/\n"
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/ubuntu/vllm/csrc/quantization/gptq/qdq_util.cuh'
+    Offset:          375
+    Length:          4
+    ReplacementText: 'sycl::half'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/ubuntu/vllm/csrc/quantization/gptq/qdq_util.cuh'
+    Offset:          389
+    Length:          0
+    ReplacementText: "/* DPCT_ORIG     __device__ half_uint16(uint16_t val) : as_uint16(val) {}*/\n"
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/ubuntu/vllm/csrc/quantization/gptq/qdq_util.cuh'
+    Offset:          393
+    Length:          11
+    ReplacementText: ''
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/ubuntu/vllm/csrc/quantization/gptq/qdq_util.cuh'
+    Offset:          450
+    Length:          0
+    ReplacementText: "/* DPCT_ORIG     __device__ half_uint16(half val) : as_half(val) {}*/\n"
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/ubuntu/vllm/csrc/quantization/gptq/qdq_util.cuh'
+    Offset:          454
+    Length:          11
+    ReplacementText: ''
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/ubuntu/vllm/csrc/quantization/gptq/qdq_util.cuh'
+    Offset:          477
+    Length:          4
+    ReplacementText: 'sycl::half'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/ubuntu/vllm/csrc/quantization/gptq/qdq_util.cuh'
+    Offset:          546
+    Length:          15
+    ReplacementText: "/* DPCT_ORIG __forceinline__ __device__ half dq_scale(const int qs, const half max_scale)*/\n__dpct_inline__"
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/ubuntu/vllm/csrc/quantization/gptq/qdq_util.cuh'
+    Offset:          562
+    Length:          11
+    ReplacementText: ''
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/ubuntu/vllm/csrc/quantization/gptq/qdq_util.cuh'
+    Offset:          573
+    Length:          4
+    ReplacementText: 'sycl::half'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/ubuntu/vllm/csrc/quantization/gptq/qdq_util.cuh'
+    Offset:          607
+    Length:          4
+    ReplacementText: 'sycl::half'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/ubuntu/vllm/csrc/quantization/gptq/qdq_util.cuh'
+    Offset:          648
+    Length:          0
+    ReplacementText: "/* DPCT_ORIG     half qs_h = __int2half_rn(qs_i * qs_i);*/\n"
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/ubuntu/vllm/csrc/quantization/gptq/qdq_util.cuh'
+    Offset:          652
+    Length:          4
+    ReplacementText: 'sycl::half'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/ubuntu/vllm/csrc/quantization/gptq/qdq_util.cuh'
+    Offset:          664
+    Length:          26
+    ReplacementText: 'sycl::vec<int, 1>{(qs_i * qs_i)}.convert<sycl::half, sycl::rounding_mode::rte>()[0]'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/ubuntu/vllm/csrc/quantization/gptq/qdq_util.cuh'
+    Offset:          692
+    Length:          0
+    ReplacementText: "/* DPCT_ORIG     qs_h = __hmul(qs_h, max_scale);*/\n"
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/ubuntu/vllm/csrc/quantization/gptq/qdq_util.cuh'
+    Offset:          703
+    Length:          23
+    ReplacementText: 'qs_h * max_scale'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/ubuntu/vllm/csrc/quantization/gptq/qdq_util.cuh'
+    Offset:          748
+    Length:          15
+    ReplacementText: "/* DPCT_ORIG __forceinline__ __device__ half dq(const int q, const int qzero, const half scale)*/\n__dpct_inline__"
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/ubuntu/vllm/csrc/quantization/gptq/qdq_util.cuh'
+    Offset:          764
+    Length:          11
+    ReplacementText: ''
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/ubuntu/vllm/csrc/quantization/gptq/qdq_util.cuh'
+    Offset:          775
+    Length:          4
+    ReplacementText: 'sycl::half'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/ubuntu/vllm/csrc/quantization/gptq/qdq_util.cuh'
+    Offset:          819
+    Length:          4
+    ReplacementText: 'sycl::half'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/ubuntu/vllm/csrc/quantization/gptq/qdq_util.cuh'
+    Offset:          833
+    Length:          0
+    ReplacementText: "/* DPCT_ORIG     return __hmul(__int2half_rn(q - qzero), scale);*/\n"
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/ubuntu/vllm/csrc/quantization/gptq/qdq_util.cuh'
+    Offset:          844
+    Length:          39
+    ReplacementText: 'sycl::vec<int, 1>{(q - qzero)}.convert<sycl::half, sycl::rounding_mode::rte>()[0] * scale'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/ubuntu/vllm/csrc/quantization/gptq/qdq_util.cuh'
+    Offset:          888
+    Length:          15
+    ReplacementText: "/* DPCT_ORIG __forceinline__ __device__ half dq_ns(const int q, const int qzero)*/\n__dpct_inline__"
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/ubuntu/vllm/csrc/quantization/gptq/qdq_util.cuh'
+    Offset:          904
+    Length:          11
+    ReplacementText: ''
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/ubuntu/vllm/csrc/quantization/gptq/qdq_util.cuh'
+    Offset:          915
+    Length:          4
+    ReplacementText: 'sycl::half'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/ubuntu/vllm/csrc/quantization/gptq/qdq_util.cuh'
+    Offset:          1019
+    Length:          0
+    ReplacementText: "/* DPCT_ORIG     return __int2half_rn(q - qzero);*/\n"
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/ubuntu/vllm/csrc/quantization/gptq/qdq_util.cuh'
+    Offset:          1030
+    Length:          24
+    ReplacementText: 'sycl::vec<int, 1>{(q - qzero)}.convert<sycl::half, sycl::rounding_mode::rte>()[0]'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/ubuntu/vllm/csrc/quantization/gptq/qdq_util.cuh'
+    Offset:          1059
+    Length:          15
+    ReplacementText: "/* DPCT_ORIG __forceinline__ __device__ int exb(const uint32_t q, const int shift, const int mask)*/\n__dpct_inline__"
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/ubuntu/vllm/csrc/quantization/gptq/qdq_util.cuh'
+    Offset:          1075
+    Length:          11
+    ReplacementText: ''
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/ubuntu/vllm/csrc/quantization/gptq/qdq_util.cuh'
+    Offset:          1189
+    Length:          15
+    ReplacementText: "/* DPCT_ORIG __forceinline__ __device__ int exb(const uint32_t q1, const uint32_t q0, const int shift, const int mask)*/\n__dpct_inline__"
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/ubuntu/vllm/csrc/quantization/gptq/qdq_util.cuh'
+    Offset:          1205
+    Length:          11
+    ReplacementText: ''
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/ubuntu/vllm/csrc/quantization/gptq/qdq_util.cuh'
+    Offset:          1297
+    Length:          0
+    ReplacementText: "/* DPCT_ORIG     return (int)(__funnelshift_rc(q0, q1, shift) & mask);*/\n    /*\n    DPCT1098:61: The ((upsample(hi, lo) >> min(shift, 32)) & 0xFFFFFFFF) expression is used instead of the __funnelshift_rc call. These two expressions do not provide the exact same functionality. Check the generated code for potential precision and/or performance issues.\n    */\n"
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/ubuntu/vllm/csrc/quantization/gptq/qdq_util.cuh'
+    Offset:          1314
+    Length:          31
+    ReplacementText: '((sycl::upsample<unsigned>(q1, q0) >> sycl::min(shift, 32)) & 0xFFFFFFFF)'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+MainSourceFilesDigest:
+  - MainSourceFile:  '/home/ubuntu/vllm/csrc/quantization/gptq/qdq_util.cuh'
+    Digest:          1047ff97544e43a842fedc1d8357b949
+DpctVersion:     2024.0.0
+MainHelperFileName: ''
+USMLevel:        ''
+FeatureMap:      {}
+CompileTargets:  {}
+OptionMap:
+  AnalysisScopePath:
+    Value:           '/home/ubuntu/vllm'
+    Specified:       false
+  AsyncHandler:
+    Value:           'false'
+    Specified:       false
+  CommentsEnabled:
+    Value:           'true'
+    Specified:       true
+  CompilationsDir:
+    Value:           '/home/ubuntu/vllm'
+    Specified:       true
+  CtadEnabled:
+    Value:           'false'
+    Specified:       false
+  EnablepProfiling:
+    Value:           'false'
+    Specified:       false
+  ExperimentalFlag:
+    Value:           '8'
+    Specified:       true
+  ExplicitClNamespace:
+    Value:           'false'
+    Specified:       false
+  ExplicitNamespace:
+    Value:           '20'
+    Specified:       false
+  ExtensionDDFlag:
+    Value:           '0'
+    Specified:       false
+  ExtensionDEFlag:
+    Value:           '4294967295'
+    Specified:       false
+  HelperFuncPreferenceFlag:
+    Value:           '0'
+    Specified:       false
+  NDRangeDim:
+    Value:           '3'
+    Specified:       false
+  NoDRYPattern:
+    Value:           'false'
+    Specified:       false
+  NoUseGenericSpace:
+    Value:           ''
+    Specified:       true
+  OptimizeMigration:
+    Value:           'false'
+    Specified:       false
+  ProcessAll:
+    Value:           'false'
+    Specified:       false
+  RuleFile:
+    Value:           ''
+    Specified:       false
+  SyclNamedLambda:
+    Value:           'false'
+    Specified:       false
+  UsmLevel:
+    Value:           '1'
+    Specified:       false
+...

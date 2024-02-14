@@ -1,0 +1,1756 @@
+---
+MainSourceFile:  '/home/ubuntu/vllm/dpct-csrc/csrc/quantization/fp8_e5m2_kvcache/quant_utils.dp.hpp'
+Replacements:
+  - FilePath:        '/home/ubuntu/vllm/csrc/quantization/fp8_e5m2_kvcache/quant_utils.cuh'
+    Offset:          14
+    Length:          0
+    ReplacementText: "#include <sycl/sycl.hpp>\n#include <dpct/dpct.hpp>\n"
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/ubuntu/vllm/csrc/quantization/fp8_e5m2_kvcache/quant_utils.cuh'
+    Offset:          142
+    Length:          44
+    ReplacementText: "/* DPCT_ORIG #include \"../../attention/dtype_float32.cuh\"*/\n#include \"../../attention/dtype_float32.dp.hpp\""
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/ubuntu/vllm/csrc/quantization/fp8_e5m2_kvcache/quant_utils.cuh'
+    Offset:          187
+    Length:          44
+    ReplacementText: "/* DPCT_ORIG #include \"../../attention/dtype_float16.cuh\"*/\n#include \"../../attention/dtype_float16.dp.hpp\""
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/ubuntu/vllm/csrc/quantization/fp8_e5m2_kvcache/quant_utils.cuh'
+    Offset:          232
+    Length:          45
+    ReplacementText: "/* DPCT_ORIG #include \"../../attention/dtype_bfloat16.cuh\"*/\n#include \"../../attention/dtype_bfloat16.dp.hpp\""
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/ubuntu/vllm/csrc/quantization/fp8_e5m2_kvcache/quant_utils.cuh'
+    Offset:          364
+    Length:          0
+    ReplacementText: "/* DPCT_ORIG template<typename Tout, typename Tin>\n__inline__ __device__ Tout vec_conversion(const Tin& x)*/\n"
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/ubuntu/vllm/csrc/quantization/fp8_e5m2_kvcache/quant_utils.cuh'
+    Offset:          413
+    Length:          11
+    ReplacementText: ''
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/ubuntu/vllm/csrc/quantization/fp8_e5m2_kvcache/quant_utils.cuh'
+    Offset:          492
+    Length:          0
+    ReplacementText: "/* DPCT_ORIG template<>\n__inline__ __device__ uint16_t vec_conversion<uint16_t, uint8_t>(const uint8_t& a)*/\n"
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/ubuntu/vllm/csrc/quantization/fp8_e5m2_kvcache/quant_utils.cuh'
+    Offset:          514
+    Length:          11
+    ReplacementText: ''
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/ubuntu/vllm/csrc/quantization/fp8_e5m2_kvcache/quant_utils.cuh'
+    Offset:          588
+    Length:          0
+    ReplacementText: "/* DPCT_ORIG     __half_raw res = __nv_cvt_fp8_to_halfraw(a, __NV_E5M2);*/\n    /*\n    DPCT1007:55: Migration of __nv_cvt_fp8_to_halfraw is not supported.\n    */\n"
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/ubuntu/vllm/csrc/quantization/fp8_e5m2_kvcache/quant_utils.cuh'
+    Offset:          592
+    Length:          10
+    ReplacementText: uint16_t
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/ubuntu/vllm/csrc/quantization/fp8_e5m2_kvcache/quant_utils.cuh'
+    Offset:          648
+    Length:          0
+    ReplacementText: "/* DPCT_ORIG     return res.x;*/\n"
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/ubuntu/vllm/csrc/quantization/fp8_e5m2_kvcache/quant_utils.cuh'
+    Offset:          659
+    Length:          5
+    ReplacementText: res
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/ubuntu/vllm/csrc/quantization/fp8_e5m2_kvcache/quant_utils.cuh'
+    Offset:          687
+    Length:          0
+    ReplacementText: "/* DPCT_ORIG template<>\n__inline__ __device__ uint32_t vec_conversion<uint32_t, uint16_t>(const uint16_t& a)*/\n"
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/ubuntu/vllm/csrc/quantization/fp8_e5m2_kvcache/quant_utils.cuh'
+    Offset:          709
+    Length:          11
+    ReplacementText: ''
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/ubuntu/vllm/csrc/quantization/fp8_e5m2_kvcache/quant_utils.cuh'
+    Offset:          855
+    Length:          0
+    ReplacementText: "    /*\n    DPCT1007:56: Migration of __nv_cvt_fp8x2_to_halfraw2 is not supported.\n    */\n"
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/ubuntu/vllm/csrc/quantization/fp8_e5m2_kvcache/quant_utils.cuh'
+    Offset:          1010
+    Length:          0
+    ReplacementText: "/* DPCT_ORIG template<>\n__inline__ __device__ uint2 vec_conversion<uint2, uint32_t>(const uint32_t& a)*/\n"
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/ubuntu/vllm/csrc/quantization/fp8_e5m2_kvcache/quant_utils.cuh'
+    Offset:          1032
+    Length:          11
+    ReplacementText: ''
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/ubuntu/vllm/csrc/quantization/fp8_e5m2_kvcache/quant_utils.cuh'
+    Offset:          1043
+    Length:          5
+    ReplacementText: 'sycl::uint2'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/ubuntu/vllm/csrc/quantization/fp8_e5m2_kvcache/quant_utils.cuh'
+    Offset:          1114
+    Length:          0
+    ReplacementText: "/* DPCT_ORIG         uint2    u32x2;*/\n"
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/ubuntu/vllm/csrc/quantization/fp8_e5m2_kvcache/quant_utils.cuh'
+    Offset:          1122
+    Length:          5
+    ReplacementText: 'sycl::uint2'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/ubuntu/vllm/csrc/quantization/fp8_e5m2_kvcache/quant_utils.cuh'
+    Offset:          1136
+    Length:          0
+    ReplacementText: '{}'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/ubuntu/vllm/csrc/quantization/fp8_e5m2_kvcache/quant_utils.cuh'
+    Offset:          1360
+    Length:          0
+    ReplacementText: "/* DPCT_ORIG template<>\n__inline__ __device__ uint4 vec_conversion<uint4, uint2>(const uint2& a)*/\n"
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/ubuntu/vllm/csrc/quantization/fp8_e5m2_kvcache/quant_utils.cuh'
+    Offset:          1382
+    Length:          11
+    ReplacementText: ''
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/ubuntu/vllm/csrc/quantization/fp8_e5m2_kvcache/quant_utils.cuh'
+    Offset:          1393
+    Length:          5
+    ReplacementText: 'sycl::uint4'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/ubuntu/vllm/csrc/quantization/fp8_e5m2_kvcache/quant_utils.cuh'
+    Offset:          1434
+    Length:          5
+    ReplacementText: 'sycl::uint2'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/ubuntu/vllm/csrc/quantization/fp8_e5m2_kvcache/quant_utils.cuh'
+    Offset:          1458
+    Length:          0
+    ReplacementText: "/* DPCT_ORIG         uint4 u64x2;*/\n"
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/ubuntu/vllm/csrc/quantization/fp8_e5m2_kvcache/quant_utils.cuh'
+    Offset:          1466
+    Length:          5
+    ReplacementText: 'sycl::uint4'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/ubuntu/vllm/csrc/quantization/fp8_e5m2_kvcache/quant_utils.cuh'
+    Offset:          1477
+    Length:          0
+    ReplacementText: '{}'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/ubuntu/vllm/csrc/quantization/fp8_e5m2_kvcache/quant_utils.cuh'
+    Offset:          1479
+    Length:          0
+    ReplacementText: "/* DPCT_ORIG         uint2 u64[2];*/\n"
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/ubuntu/vllm/csrc/quantization/fp8_e5m2_kvcache/quant_utils.cuh'
+    Offset:          1487
+    Length:          5
+    ReplacementText: 'sycl::uint2'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/ubuntu/vllm/csrc/quantization/fp8_e5m2_kvcache/quant_utils.cuh'
+    Offset:          1512
+    Length:          0
+    ReplacementText: "/* DPCT_ORIG     tmp.u64[0] = vec_conversion<uint2, uint32_t>(a.x);*/\n"
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/ubuntu/vllm/csrc/quantization/fp8_e5m2_kvcache/quant_utils.cuh'
+    Offset:          1544
+    Length:          5
+    ReplacementText: 'sycl::uint2'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/ubuntu/vllm/csrc/quantization/fp8_e5m2_kvcache/quant_utils.cuh'
+    Offset:          1561
+    Length:          3
+    ReplacementText: 'a.x()'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/ubuntu/vllm/csrc/quantization/fp8_e5m2_kvcache/quant_utils.cuh'
+    Offset:          1567
+    Length:          0
+    ReplacementText: "/* DPCT_ORIG     tmp.u64[1] = vec_conversion<uint2, uint32_t>(a.y);*/\n"
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/ubuntu/vllm/csrc/quantization/fp8_e5m2_kvcache/quant_utils.cuh'
+    Offset:          1599
+    Length:          5
+    ReplacementText: 'sycl::uint2'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/ubuntu/vllm/csrc/quantization/fp8_e5m2_kvcache/quant_utils.cuh'
+    Offset:          1616
+    Length:          3
+    ReplacementText: 'a.y()'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/ubuntu/vllm/csrc/quantization/fp8_e5m2_kvcache/quant_utils.cuh'
+    Offset:          1671
+    Length:          0
+    ReplacementText: "/* DPCT_ORIG template<>\n__inline__ __device__ __nv_bfloat16 vec_conversion<__nv_bfloat16, uint8_t>(const uint8_t& a)*/\n"
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/ubuntu/vllm/csrc/quantization/fp8_e5m2_kvcache/quant_utils.cuh'
+    Offset:          1693
+    Length:          11
+    ReplacementText: ''
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/ubuntu/vllm/csrc/quantization/fp8_e5m2_kvcache/quant_utils.cuh'
+    Offset:          1704
+    Length:          13
+    ReplacementText: 'sycl::ext::oneapi::bfloat16'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/ubuntu/vllm/csrc/quantization/fp8_e5m2_kvcache/quant_utils.cuh'
+    Offset:          1862
+    Length:          0
+    ReplacementText: "/* DPCT_ORIG     __half_raw res = __nv_cvt_fp8_to_halfraw(a, __NV_E5M2);*/\n    /*\n    DPCT1007:57: Migration of __nv_cvt_fp8_to_halfraw is not supported.\n    */\n"
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/ubuntu/vllm/csrc/quantization/fp8_e5m2_kvcache/quant_utils.cuh'
+    Offset:          1866
+    Length:          10
+    ReplacementText: uint16_t
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/ubuntu/vllm/csrc/quantization/fp8_e5m2_kvcache/quant_utils.cuh'
+    Offset:          1951
+    Length:          0
+    ReplacementText: "/* DPCT_ORIG     float tmp = half_to_float(res.x);*/\n"
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/ubuntu/vllm/csrc/quantization/fp8_e5m2_kvcache/quant_utils.cuh'
+    Offset:          1981
+    Length:          5
+    ReplacementText: res
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/ubuntu/vllm/csrc/quantization/fp8_e5m2_kvcache/quant_utils.cuh'
+    Offset:          1989
+    Length:          0
+    ReplacementText: "/* DPCT_ORIG     return __float2bfloat16(tmp);*/\n"
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/ubuntu/vllm/csrc/quantization/fp8_e5m2_kvcache/quant_utils.cuh'
+    Offset:          2000
+    Length:          21
+    ReplacementText: 'sycl::ext::oneapi::bfloat16(tmp)'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/ubuntu/vllm/csrc/quantization/fp8_e5m2_kvcache/quant_utils.cuh'
+    Offset:          2053
+    Length:          0
+    ReplacementText: "/* DPCT_ORIG template<>\n__inline__ __device__ __nv_bfloat162 vec_conversion<__nv_bfloat162, uint16_t>(const uint16_t& a)*/\n"
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/ubuntu/vllm/csrc/quantization/fp8_e5m2_kvcache/quant_utils.cuh'
+    Offset:          2075
+    Length:          11
+    ReplacementText: ''
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/ubuntu/vllm/csrc/quantization/fp8_e5m2_kvcache/quant_utils.cuh'
+    Offset:          2086
+    Length:          14
+    ReplacementText: 'sycl::marray<sycl::ext::oneapi::bfloat16, 2>'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/ubuntu/vllm/csrc/quantization/fp8_e5m2_kvcache/quant_utils.cuh'
+    Offset:          2163
+    Length:          0
+    ReplacementText: "/* DPCT_ORIG     __nv_bfloat162 res;*/\n"
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/ubuntu/vllm/csrc/quantization/fp8_e5m2_kvcache/quant_utils.cuh'
+    Offset:          2167
+    Length:          14
+    ReplacementText: 'sycl::marray<sycl::ext::oneapi::bfloat16, 2>'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/ubuntu/vllm/csrc/quantization/fp8_e5m2_kvcache/quant_utils.cuh'
+    Offset:          2187
+    Length:          0
+    ReplacementText: "/* DPCT_ORIG     res.x = vec_conversion<__nv_bfloat16, uint8_t>((uint8_t)a);*/\n"
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/ubuntu/vllm/csrc/quantization/fp8_e5m2_kvcache/quant_utils.cuh'
+    Offset:          2191
+    Length:          5
+    ReplacementText: 'res[0]'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/ubuntu/vllm/csrc/quantization/fp8_e5m2_kvcache/quant_utils.cuh'
+    Offset:          2214
+    Length:          13
+    ReplacementText: 'sycl::ext::oneapi::bfloat16'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/ubuntu/vllm/csrc/quantization/fp8_e5m2_kvcache/quant_utils.cuh'
+    Offset:          2251
+    Length:          0
+    ReplacementText: "/* DPCT_ORIG     res.y = vec_conversion<__nv_bfloat16, uint8_t>((uint8_t)(a >> 8U));*/\n"
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/ubuntu/vllm/csrc/quantization/fp8_e5m2_kvcache/quant_utils.cuh'
+    Offset:          2255
+    Length:          5
+    ReplacementText: 'res[1]'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/ubuntu/vllm/csrc/quantization/fp8_e5m2_kvcache/quant_utils.cuh'
+    Offset:          2278
+    Length:          13
+    ReplacementText: 'sycl::ext::oneapi::bfloat16'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/ubuntu/vllm/csrc/quantization/fp8_e5m2_kvcache/quant_utils.cuh'
+    Offset:          2363
+    Length:          0
+    ReplacementText: "/* DPCT_ORIG template<>\n__inline__ __device__ bf16_4_t vec_conversion<bf16_4_t, uint32_t>(const uint32_t& a)*/\n"
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/ubuntu/vllm/csrc/quantization/fp8_e5m2_kvcache/quant_utils.cuh'
+    Offset:          2385
+    Length:          11
+    ReplacementText: ''
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/ubuntu/vllm/csrc/quantization/fp8_e5m2_kvcache/quant_utils.cuh'
+    Offset:          2479
+    Length:          0
+    ReplacementText: "/* DPCT_ORIG     res.x = vec_conversion<__nv_bfloat162, uint16_t>((uint16_t)a);*/\n"
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/ubuntu/vllm/csrc/quantization/fp8_e5m2_kvcache/quant_utils.cuh'
+    Offset:          2506
+    Length:          14
+    ReplacementText: 'sycl::marray<sycl::ext::oneapi::bfloat16, 2>'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/ubuntu/vllm/csrc/quantization/fp8_e5m2_kvcache/quant_utils.cuh'
+    Offset:          2546
+    Length:          0
+    ReplacementText: "/* DPCT_ORIG     res.y = vec_conversion<__nv_bfloat162, uint16_t>((uint16_t)(a >> 16U));*/\n"
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/ubuntu/vllm/csrc/quantization/fp8_e5m2_kvcache/quant_utils.cuh'
+    Offset:          2573
+    Length:          14
+    ReplacementText: 'sycl::marray<sycl::ext::oneapi::bfloat16, 2>'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/ubuntu/vllm/csrc/quantization/fp8_e5m2_kvcache/quant_utils.cuh'
+    Offset:          2662
+    Length:          0
+    ReplacementText: "/* DPCT_ORIG template<>\n__inline__ __device__ bf16_8_t vec_conversion<bf16_8_t, uint2>(const uint2& a)*/\n"
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/ubuntu/vllm/csrc/quantization/fp8_e5m2_kvcache/quant_utils.cuh'
+    Offset:          2684
+    Length:          11
+    ReplacementText: ''
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/ubuntu/vllm/csrc/quantization/fp8_e5m2_kvcache/quant_utils.cuh'
+    Offset:          2742
+    Length:          5
+    ReplacementText: 'sycl::uint2'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/ubuntu/vllm/csrc/quantization/fp8_e5m2_kvcache/quant_utils.cuh'
+    Offset:          2779
+    Length:          0
+    ReplacementText: "/* DPCT_ORIG     tmp1 = vec_conversion<bf16_4_t, uint32_t>(a.x);*/\n"
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/ubuntu/vllm/csrc/quantization/fp8_e5m2_kvcache/quant_utils.cuh'
+    Offset:          2825
+    Length:          3
+    ReplacementText: 'a.x()'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/ubuntu/vllm/csrc/quantization/fp8_e5m2_kvcache/quant_utils.cuh'
+    Offset:          2831
+    Length:          0
+    ReplacementText: "/* DPCT_ORIG     tmp2 = vec_conversion<bf16_4_t, uint32_t>(a.y);*/\n"
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/ubuntu/vllm/csrc/quantization/fp8_e5m2_kvcache/quant_utils.cuh'
+    Offset:          2877
+    Length:          3
+    ReplacementText: 'a.y()'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/ubuntu/vllm/csrc/quantization/fp8_e5m2_kvcache/quant_utils.cuh'
+    Offset:          3016
+    Length:          0
+    ReplacementText: "/* DPCT_ORIG template<>\n__inline__ __device__ float vec_conversion<float, uint8_t>(const uint8_t& a)*/\n"
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/ubuntu/vllm/csrc/quantization/fp8_e5m2_kvcache/quant_utils.cuh'
+    Offset:          3038
+    Length:          11
+    ReplacementText: ''
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/ubuntu/vllm/csrc/quantization/fp8_e5m2_kvcache/quant_utils.cuh'
+    Offset:          3256
+    Length:          0
+    ReplacementText: "/* DPCT_ORIG template<>\n__inline__ __device__ float2 vec_conversion<float2, uint16_t>(const uint16_t& a)*/\n"
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/ubuntu/vllm/csrc/quantization/fp8_e5m2_kvcache/quant_utils.cuh'
+    Offset:          3278
+    Length:          11
+    ReplacementText: ''
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/ubuntu/vllm/csrc/quantization/fp8_e5m2_kvcache/quant_utils.cuh'
+    Offset:          3289
+    Length:          6
+    ReplacementText: 'sycl::float2'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/ubuntu/vllm/csrc/quantization/fp8_e5m2_kvcache/quant_utils.cuh'
+    Offset:          3508
+    Length:          0
+    ReplacementText: "/* DPCT_ORIG template<>\n__inline__ __device__ Float4_ vec_conversion<Float4_, uint32_t>(const uint32_t& a)*/\n"
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/ubuntu/vllm/csrc/quantization/fp8_e5m2_kvcache/quant_utils.cuh'
+    Offset:          3530
+    Length:          11
+    ReplacementText: ''
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/ubuntu/vllm/csrc/quantization/fp8_e5m2_kvcache/quant_utils.cuh'
+    Offset:          3621
+    Length:          0
+    ReplacementText: "/* DPCT_ORIG     res.x = vec_conversion<float2, uint16_t>((uint16_t)a);*/\n"
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/ubuntu/vllm/csrc/quantization/fp8_e5m2_kvcache/quant_utils.cuh'
+    Offset:          3648
+    Length:          6
+    ReplacementText: 'sycl::float2'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/ubuntu/vllm/csrc/quantization/fp8_e5m2_kvcache/quant_utils.cuh'
+    Offset:          3680
+    Length:          0
+    ReplacementText: "/* DPCT_ORIG     res.y = vec_conversion<float2, uint16_t>((uint16_t)(a >> 16U));*/\n"
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/ubuntu/vllm/csrc/quantization/fp8_e5m2_kvcache/quant_utils.cuh'
+    Offset:          3707
+    Length:          6
+    ReplacementText: 'sycl::float2'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/ubuntu/vllm/csrc/quantization/fp8_e5m2_kvcache/quant_utils.cuh'
+    Offset:          3786
+    Length:          0
+    ReplacementText: "/* DPCT_ORIG template<>\n__inline__ __device__ Float8_ vec_conversion<Float8_, uint2>(const uint2& a)*/\n"
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/ubuntu/vllm/csrc/quantization/fp8_e5m2_kvcache/quant_utils.cuh'
+    Offset:          3808
+    Length:          11
+    ReplacementText: ''
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/ubuntu/vllm/csrc/quantization/fp8_e5m2_kvcache/quant_utils.cuh'
+    Offset:          3864
+    Length:          5
+    ReplacementText: 'sycl::uint2'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/ubuntu/vllm/csrc/quantization/fp8_e5m2_kvcache/quant_utils.cuh'
+    Offset:          3900
+    Length:          0
+    ReplacementText: "/* DPCT_ORIG     tmp1 = vec_conversion<Float4_, uint32_t>(a.x);*/\n"
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/ubuntu/vllm/csrc/quantization/fp8_e5m2_kvcache/quant_utils.cuh'
+    Offset:          3945
+    Length:          3
+    ReplacementText: 'a.x()'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/ubuntu/vllm/csrc/quantization/fp8_e5m2_kvcache/quant_utils.cuh'
+    Offset:          3951
+    Length:          0
+    ReplacementText: "/* DPCT_ORIG     tmp2 = vec_conversion<Float4_, uint32_t>(a.y);*/\n"
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/ubuntu/vllm/csrc/quantization/fp8_e5m2_kvcache/quant_utils.cuh'
+    Offset:          3996
+    Length:          3
+    ReplacementText: 'a.y()'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/ubuntu/vllm/csrc/quantization/fp8_e5m2_kvcache/quant_utils.cuh'
+    Offset:          4134
+    Length:          0
+    ReplacementText: "/* DPCT_ORIG template<>\n__inline__ __device__ uint8_t vec_conversion<uint8_t, uint16_t>(const uint16_t& a)*/\n"
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/ubuntu/vllm/csrc/quantization/fp8_e5m2_kvcache/quant_utils.cuh'
+    Offset:          4156
+    Length:          11
+    ReplacementText: ''
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/ubuntu/vllm/csrc/quantization/fp8_e5m2_kvcache/quant_utils.cuh'
+    Offset:          4230
+    Length:          0
+    ReplacementText: "/* DPCT_ORIG     __half_raw tmp;*/\n"
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/ubuntu/vllm/csrc/quantization/fp8_e5m2_kvcache/quant_utils.cuh'
+    Offset:          4234
+    Length:          10
+    ReplacementText: uint16_t
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/ubuntu/vllm/csrc/quantization/fp8_e5m2_kvcache/quant_utils.cuh'
+    Offset:          4250
+    Length:          0
+    ReplacementText: "/* DPCT_ORIG     tmp.x = a;*/\n"
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/ubuntu/vllm/csrc/quantization/fp8_e5m2_kvcache/quant_utils.cuh'
+    Offset:          4254
+    Length:          5
+    ReplacementText: tmp
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/ubuntu/vllm/csrc/quantization/fp8_e5m2_kvcache/quant_utils.cuh'
+    Offset:          4265
+    Length:          0
+    ReplacementText: "/* DPCT_ORIG     __nv_fp8_storage_t res = __nv_cvt_halfraw_to_fp8(tmp, __NV_SATFINITE, __NV_E5M2);*/\n    /*\n    DPCT1007:58: Migration of __nv_cvt_halfraw_to_fp8 is not supported.\n    */\n"
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/ubuntu/vllm/csrc/quantization/fp8_e5m2_kvcache/quant_utils.cuh'
+    Offset:          4318
+    Length:          3
+    ReplacementText: 'sycl::bit_cast<sycl::half>(tmp)'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/ubuntu/vllm/csrc/quantization/fp8_e5m2_kvcache/quant_utils.cuh'
+    Offset:          4394
+    Length:          0
+    ReplacementText: "/* DPCT_ORIG template<>\n__inline__ __device__ uint8_t vec_conversion<uint8_t, __nv_bfloat16>(const __nv_bfloat16& a)*/\n"
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/ubuntu/vllm/csrc/quantization/fp8_e5m2_kvcache/quant_utils.cuh'
+    Offset:          4416
+    Length:          11
+    ReplacementText: ''
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/ubuntu/vllm/csrc/quantization/fp8_e5m2_kvcache/quant_utils.cuh'
+    Offset:          4480
+    Length:          13
+    ReplacementText: 'sycl::ext::oneapi::bfloat16'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/ubuntu/vllm/csrc/quantization/fp8_e5m2_kvcache/quant_utils.cuh'
+    Offset:          4500
+    Length:          0
+    ReplacementText: "/* DPCT_ORIG #if defined(__CUDA_ARCH__) && __CUDA_ARCH__ < 800*/\n"
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/ubuntu/vllm/csrc/quantization/fp8_e5m2_kvcache/quant_utils.cuh'
+    Offset:          4512
+    Length:          13
+    ReplacementText: DPCT_COMPATIBILITY_TEMP
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/ubuntu/vllm/csrc/quantization/fp8_e5m2_kvcache/quant_utils.cuh'
+    Offset:          4530
+    Length:          13
+    ReplacementText: DPCT_COMPATIBILITY_TEMP
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/ubuntu/vllm/csrc/quantization/fp8_e5m2_kvcache/quant_utils.cuh'
+    Offset:          4550
+    Length:          0
+    ReplacementText: "    /*\n    DPCT1007:59: Migration of __assert_fail is not supported.\n    */\n"
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/ubuntu/vllm/csrc/quantization/fp8_e5m2_kvcache/quant_utils.cuh'
+    Offset:          4733
+    Length:          0
+    ReplacementText: "/* DPCT_ORIG template<>\n__inline__ __device__ uint8_t vec_conversion<uint8_t, float>(const float& a)*/\n"
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/ubuntu/vllm/csrc/quantization/fp8_e5m2_kvcache/quant_utils.cuh'
+    Offset:          4755
+    Length:          11
+    ReplacementText: ''
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/ubuntu/vllm/csrc/quantization/fp8_e5m2_kvcache/quant_utils.cuh'
+    Offset:          4823
+    Length:          0
+    ReplacementText: "    /*\n    DPCT1007:60: Migration of __nv_cvt_float_to_fp8 is not supported.\n    */\n"
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/ubuntu/vllm/csrc/quantization/fp8_e5m2_kvcache/quant_utils.cuh'
+    Offset:          4952
+    Length:          0
+    ReplacementText: "/* DPCT_ORIG template<>\n__inline__ __device__ float4 vec_conversion<float4, uint32_t>(const uint32_t& a)*/\n"
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/ubuntu/vllm/csrc/quantization/fp8_e5m2_kvcache/quant_utils.cuh'
+    Offset:          4974
+    Length:          11
+    ReplacementText: ''
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/ubuntu/vllm/csrc/quantization/fp8_e5m2_kvcache/quant_utils.cuh'
+    Offset:          4985
+    Length:          6
+    ReplacementText: 'sycl::float4'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/ubuntu/vllm/csrc/quantization/fp8_e5m2_kvcache/quant_utils.cuh'
+    Offset:          5102
+    Length:          0
+    ReplacementText: "/* DPCT_ORIG     float4 res = make_float4(tmp.x.x, tmp.x.y, tmp.y.x, tmp.y.y);*/\n"
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/ubuntu/vllm/csrc/quantization/fp8_e5m2_kvcache/quant_utils.cuh'
+    Offset:          5106
+    Length:          6
+    ReplacementText: 'sycl::float4'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/ubuntu/vllm/csrc/quantization/fp8_e5m2_kvcache/quant_utils.cuh'
+    Offset:          5119
+    Length:          47
+    ReplacementText: 'sycl::float4(tmp.x.x(), tmp.x.y(), tmp.y.x(), tmp.y.y())'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/ubuntu/vllm/csrc/quantization/fp8_e5m2_kvcache/quant_utils.cuh'
+    Offset:          5188
+    Length:          0
+    ReplacementText: "/* DPCT_ORIG template<>\n__inline__ __device__ uint32_t vec_conversion<uint32_t, float2>(const float2& a)*/\n"
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/ubuntu/vllm/csrc/quantization/fp8_e5m2_kvcache/quant_utils.cuh'
+    Offset:          5210
+    Length:          11
+    ReplacementText: ''
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/ubuntu/vllm/csrc/quantization/fp8_e5m2_kvcache/quant_utils.cuh'
+    Offset:          5269
+    Length:          6
+    ReplacementText: 'sycl::float2'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/ubuntu/vllm/csrc/quantization/fp8_e5m2_kvcache/quant_utils.cuh'
+    Offset:          5294
+    Length:          0
+    ReplacementText: "/* DPCT_ORIG         half2    float16;*/\n"
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/ubuntu/vllm/csrc/quantization/fp8_e5m2_kvcache/quant_utils.cuh'
+    Offset:          5302
+    Length:          5
+    ReplacementText: 'sycl::half2'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/ubuntu/vllm/csrc/quantization/fp8_e5m2_kvcache/quant_utils.cuh'
+    Offset:          5353
+    Length:          0
+    ReplacementText: "/* DPCT_ORIG     float16 = __float22half2_rn(a);*/\n"
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/ubuntu/vllm/csrc/quantization/fp8_e5m2_kvcache/quant_utils.cuh'
+    Offset:          5367
+    Length:          20
+    ReplacementText: 'a.convert<sycl::half, sycl::rounding_mode::rte>()'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/ubuntu/vllm/csrc/quantization/fp8_e5m2_kvcache/quant_utils.cuh'
+    Offset:          5411
+    Length:          0
+    ReplacementText: "/* DPCT_ORIG template<>\n__inline__ __device__ uint2 vec_conversion<uint2, Float4_>(const Float4_& a)*/\n"
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/ubuntu/vllm/csrc/quantization/fp8_e5m2_kvcache/quant_utils.cuh'
+    Offset:          5433
+    Length:          11
+    ReplacementText: ''
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/ubuntu/vllm/csrc/quantization/fp8_e5m2_kvcache/quant_utils.cuh'
+    Offset:          5444
+    Length:          5
+    ReplacementText: 'sycl::uint2'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/ubuntu/vllm/csrc/quantization/fp8_e5m2_kvcache/quant_utils.cuh'
+    Offset:          5501
+    Length:          0
+    ReplacementText: "/* DPCT_ORIG     uint2  b;*/\n"
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/ubuntu/vllm/csrc/quantization/fp8_e5m2_kvcache/quant_utils.cuh'
+    Offset:          5505
+    Length:          5
+    ReplacementText: 'sycl::uint2'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/ubuntu/vllm/csrc/quantization/fp8_e5m2_kvcache/quant_utils.cuh'
+    Offset:          5515
+    Length:          0
+    ReplacementText: "/* DPCT_ORIG     float2 val;*/\n"
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/ubuntu/vllm/csrc/quantization/fp8_e5m2_kvcache/quant_utils.cuh'
+    Offset:          5519
+    Length:          6
+    ReplacementText: 'sycl::float2'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/ubuntu/vllm/csrc/quantization/fp8_e5m2_kvcache/quant_utils.cuh'
+    Offset:          5531
+    Length:          0
+    ReplacementText: "/* DPCT_ORIG     val.x = a.x.x;*/\n"
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/ubuntu/vllm/csrc/quantization/fp8_e5m2_kvcache/quant_utils.cuh'
+    Offset:          5535
+    Length:          5
+    ReplacementText: 'val.x()'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/ubuntu/vllm/csrc/quantization/fp8_e5m2_kvcache/quant_utils.cuh'
+    Offset:          5543
+    Length:          5
+    ReplacementText: 'a.x.x()'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/ubuntu/vllm/csrc/quantization/fp8_e5m2_kvcache/quant_utils.cuh'
+    Offset:          5550
+    Length:          0
+    ReplacementText: "/* DPCT_ORIG     val.y = a.x.y;*/\n"
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/ubuntu/vllm/csrc/quantization/fp8_e5m2_kvcache/quant_utils.cuh'
+    Offset:          5554
+    Length:          5
+    ReplacementText: 'val.y()'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/ubuntu/vllm/csrc/quantization/fp8_e5m2_kvcache/quant_utils.cuh'
+    Offset:          5562
+    Length:          5
+    ReplacementText: 'a.x.y()'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/ubuntu/vllm/csrc/quantization/fp8_e5m2_kvcache/quant_utils.cuh'
+    Offset:          5569
+    Length:          0
+    ReplacementText: "/* DPCT_ORIG     b.x   = vec_conversion<uint32_t, float2>(val);*/\n"
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/ubuntu/vllm/csrc/quantization/fp8_e5m2_kvcache/quant_utils.cuh'
+    Offset:          5573
+    Length:          3
+    ReplacementText: 'b.x()'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/ubuntu/vllm/csrc/quantization/fp8_e5m2_kvcache/quant_utils.cuh'
+    Offset:          5606
+    Length:          6
+    ReplacementText: 'sycl::float2'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/ubuntu/vllm/csrc/quantization/fp8_e5m2_kvcache/quant_utils.cuh'
+    Offset:          5621
+    Length:          0
+    ReplacementText: "/* DPCT_ORIG     val.x = a.y.x;*/\n"
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/ubuntu/vllm/csrc/quantization/fp8_e5m2_kvcache/quant_utils.cuh'
+    Offset:          5625
+    Length:          5
+    ReplacementText: 'val.x()'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/ubuntu/vllm/csrc/quantization/fp8_e5m2_kvcache/quant_utils.cuh'
+    Offset:          5633
+    Length:          5
+    ReplacementText: 'a.y.x()'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/ubuntu/vllm/csrc/quantization/fp8_e5m2_kvcache/quant_utils.cuh'
+    Offset:          5640
+    Length:          0
+    ReplacementText: "/* DPCT_ORIG     val.y = a.y.y;*/\n"
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/ubuntu/vllm/csrc/quantization/fp8_e5m2_kvcache/quant_utils.cuh'
+    Offset:          5644
+    Length:          5
+    ReplacementText: 'val.y()'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/ubuntu/vllm/csrc/quantization/fp8_e5m2_kvcache/quant_utils.cuh'
+    Offset:          5652
+    Length:          5
+    ReplacementText: 'a.y.y()'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/ubuntu/vllm/csrc/quantization/fp8_e5m2_kvcache/quant_utils.cuh'
+    Offset:          5659
+    Length:          0
+    ReplacementText: "/* DPCT_ORIG     b.y   = vec_conversion<uint32_t, float2>(val);*/\n"
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/ubuntu/vllm/csrc/quantization/fp8_e5m2_kvcache/quant_utils.cuh'
+    Offset:          5663
+    Length:          3
+    ReplacementText: 'b.y()'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/ubuntu/vllm/csrc/quantization/fp8_e5m2_kvcache/quant_utils.cuh'
+    Offset:          5696
+    Length:          6
+    ReplacementText: 'sycl::float2'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/ubuntu/vllm/csrc/quantization/fp8_e5m2_kvcache/quant_utils.cuh'
+    Offset:          5728
+    Length:          0
+    ReplacementText: "/* DPCT_ORIG template<>\n__inline__ __device__ float4 vec_conversion<float4, Float4_>(const Float4_& a)*/\n"
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/ubuntu/vllm/csrc/quantization/fp8_e5m2_kvcache/quant_utils.cuh'
+    Offset:          5750
+    Length:          11
+    ReplacementText: ''
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/ubuntu/vllm/csrc/quantization/fp8_e5m2_kvcache/quant_utils.cuh'
+    Offset:          5761
+    Length:          6
+    ReplacementText: 'sycl::float4'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/ubuntu/vllm/csrc/quantization/fp8_e5m2_kvcache/quant_utils.cuh'
+    Offset:          5820
+    Length:          0
+    ReplacementText: "/* DPCT_ORIG     float4 b;*/\n"
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/ubuntu/vllm/csrc/quantization/fp8_e5m2_kvcache/quant_utils.cuh'
+    Offset:          5824
+    Length:          6
+    ReplacementText: 'sycl::float4'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/ubuntu/vllm/csrc/quantization/fp8_e5m2_kvcache/quant_utils.cuh'
+    Offset:          5834
+    Length:          0
+    ReplacementText: "/* DPCT_ORIG     b.x = a.x.x;*/\n"
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/ubuntu/vllm/csrc/quantization/fp8_e5m2_kvcache/quant_utils.cuh'
+    Offset:          5838
+    Length:          3
+    ReplacementText: 'b.x()'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/ubuntu/vllm/csrc/quantization/fp8_e5m2_kvcache/quant_utils.cuh'
+    Offset:          5844
+    Length:          5
+    ReplacementText: 'a.x.x()'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/ubuntu/vllm/csrc/quantization/fp8_e5m2_kvcache/quant_utils.cuh'
+    Offset:          5851
+    Length:          0
+    ReplacementText: "/* DPCT_ORIG     b.y = a.x.y;*/\n"
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/ubuntu/vllm/csrc/quantization/fp8_e5m2_kvcache/quant_utils.cuh'
+    Offset:          5855
+    Length:          3
+    ReplacementText: 'b.y()'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/ubuntu/vllm/csrc/quantization/fp8_e5m2_kvcache/quant_utils.cuh'
+    Offset:          5861
+    Length:          5
+    ReplacementText: 'a.x.y()'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/ubuntu/vllm/csrc/quantization/fp8_e5m2_kvcache/quant_utils.cuh'
+    Offset:          5868
+    Length:          0
+    ReplacementText: "/* DPCT_ORIG     b.z = a.y.x;*/\n"
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/ubuntu/vllm/csrc/quantization/fp8_e5m2_kvcache/quant_utils.cuh'
+    Offset:          5872
+    Length:          3
+    ReplacementText: 'b.z()'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/ubuntu/vllm/csrc/quantization/fp8_e5m2_kvcache/quant_utils.cuh'
+    Offset:          5878
+    Length:          5
+    ReplacementText: 'a.y.x()'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/ubuntu/vllm/csrc/quantization/fp8_e5m2_kvcache/quant_utils.cuh'
+    Offset:          5885
+    Length:          0
+    ReplacementText: "/* DPCT_ORIG     b.w = a.y.y;*/\n"
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/ubuntu/vllm/csrc/quantization/fp8_e5m2_kvcache/quant_utils.cuh'
+    Offset:          5889
+    Length:          3
+    ReplacementText: 'b.w()'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/ubuntu/vllm/csrc/quantization/fp8_e5m2_kvcache/quant_utils.cuh'
+    Offset:          5895
+    Length:          5
+    ReplacementText: 'a.y.y()'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/ubuntu/vllm/csrc/quantization/fp8_e5m2_kvcache/quant_utils.cuh'
+    Offset:          5919
+    Length:          0
+    ReplacementText: "/* DPCT_ORIG template<>\n__inline__ __device__ uint4 vec_conversion<uint4, Float8_>(const Float8_& a)*/\n"
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/ubuntu/vllm/csrc/quantization/fp8_e5m2_kvcache/quant_utils.cuh'
+    Offset:          5941
+    Length:          11
+    ReplacementText: ''
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/ubuntu/vllm/csrc/quantization/fp8_e5m2_kvcache/quant_utils.cuh'
+    Offset:          5952
+    Length:          5
+    ReplacementText: 'sycl::uint4'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/ubuntu/vllm/csrc/quantization/fp8_e5m2_kvcache/quant_utils.cuh'
+    Offset:          6009
+    Length:          0
+    ReplacementText: "/* DPCT_ORIG     uint4 b;*/\n"
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/ubuntu/vllm/csrc/quantization/fp8_e5m2_kvcache/quant_utils.cuh'
+    Offset:          6013
+    Length:          5
+    ReplacementText: 'sycl::uint4'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/ubuntu/vllm/csrc/quantization/fp8_e5m2_kvcache/quant_utils.cuh'
+    Offset:          6022
+    Length:          0
+    ReplacementText: "/* DPCT_ORIG     b.x = vec_conversion<uint32_t, float2>(a.x);*/\n"
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/ubuntu/vllm/csrc/quantization/fp8_e5m2_kvcache/quant_utils.cuh'
+    Offset:          6026
+    Length:          3
+    ReplacementText: 'b.x()'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/ubuntu/vllm/csrc/quantization/fp8_e5m2_kvcache/quant_utils.cuh'
+    Offset:          6057
+    Length:          6
+    ReplacementText: 'sycl::float2'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/ubuntu/vllm/csrc/quantization/fp8_e5m2_kvcache/quant_utils.cuh'
+    Offset:          6071
+    Length:          0
+    ReplacementText: "/* DPCT_ORIG     b.y = vec_conversion<uint32_t, float2>(a.y);*/\n"
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/ubuntu/vllm/csrc/quantization/fp8_e5m2_kvcache/quant_utils.cuh'
+    Offset:          6075
+    Length:          3
+    ReplacementText: 'b.y()'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/ubuntu/vllm/csrc/quantization/fp8_e5m2_kvcache/quant_utils.cuh'
+    Offset:          6106
+    Length:          6
+    ReplacementText: 'sycl::float2'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/ubuntu/vllm/csrc/quantization/fp8_e5m2_kvcache/quant_utils.cuh'
+    Offset:          6120
+    Length:          0
+    ReplacementText: "/* DPCT_ORIG     b.z = vec_conversion<uint32_t, float2>(a.z);*/\n"
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/ubuntu/vllm/csrc/quantization/fp8_e5m2_kvcache/quant_utils.cuh'
+    Offset:          6124
+    Length:          3
+    ReplacementText: 'b.z()'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/ubuntu/vllm/csrc/quantization/fp8_e5m2_kvcache/quant_utils.cuh'
+    Offset:          6155
+    Length:          6
+    ReplacementText: 'sycl::float2'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/ubuntu/vllm/csrc/quantization/fp8_e5m2_kvcache/quant_utils.cuh'
+    Offset:          6169
+    Length:          0
+    ReplacementText: "/* DPCT_ORIG     b.w = vec_conversion<uint32_t, float2>(a.w);*/\n"
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/ubuntu/vllm/csrc/quantization/fp8_e5m2_kvcache/quant_utils.cuh'
+    Offset:          6173
+    Length:          3
+    ReplacementText: 'b.w()'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/ubuntu/vllm/csrc/quantization/fp8_e5m2_kvcache/quant_utils.cuh'
+    Offset:          6204
+    Length:          6
+    ReplacementText: 'sycl::float2'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/ubuntu/vllm/csrc/quantization/fp8_e5m2_kvcache/quant_utils.cuh'
+    Offset:          6235
+    Length:          0
+    ReplacementText: "/* DPCT_ORIG template<>\n__inline__ __device__ __nv_bfloat162 vec_conversion<__nv_bfloat162, float2>(const float2 &a) {*/\n"
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/ubuntu/vllm/csrc/quantization/fp8_e5m2_kvcache/quant_utils.cuh'
+    Offset:          6257
+    Length:          11
+    ReplacementText: ''
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/ubuntu/vllm/csrc/quantization/fp8_e5m2_kvcache/quant_utils.cuh'
+    Offset:          6268
+    Length:          14
+    ReplacementText: 'sycl::marray<sycl::ext::oneapi::bfloat16, 2>'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/ubuntu/vllm/csrc/quantization/fp8_e5m2_kvcache/quant_utils.cuh'
+    Offset:          6328
+    Length:          6
+    ReplacementText: 'sycl::float2'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/ubuntu/vllm/csrc/quantization/fp8_e5m2_kvcache/quant_utils.cuh'
+    Offset:          6341
+    Length:          0
+    ReplacementText: "/* DPCT_ORIG     __nv_bfloat162 b;*/\n"
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/ubuntu/vllm/csrc/quantization/fp8_e5m2_kvcache/quant_utils.cuh'
+    Offset:          6345
+    Length:          14
+    ReplacementText: 'sycl::marray<sycl::ext::oneapi::bfloat16, 2>'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/ubuntu/vllm/csrc/quantization/fp8_e5m2_kvcache/quant_utils.cuh'
+    Offset:          6402
+    Length:          0
+    ReplacementText: "/* DPCT_ORIG template<>\n__inline__ __device__ bf16_4_t vec_conversion<bf16_4_t, Float4_>(const Float4_ &a) {*/\n"
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/ubuntu/vllm/csrc/quantization/fp8_e5m2_kvcache/quant_utils.cuh'
+    Offset:          6424
+    Length:          11
+    ReplacementText: ''
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/ubuntu/vllm/csrc/quantization/fp8_e5m2_kvcache/quant_utils.cuh'
+    Offset:          6553
+    Length:          0
+    ReplacementText: "/* DPCT_ORIG template<>\n__inline__ __device__ bf16_8_t vec_conversion<bf16_8_t, Float8_>(const Float8_ &a) {*/\n"
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/ubuntu/vllm/csrc/quantization/fp8_e5m2_kvcache/quant_utils.cuh'
+    Offset:          6575
+    Length:          11
+    ReplacementText: ''
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+MainSourceFilesDigest:
+  - MainSourceFile:  '/home/ubuntu/vllm/csrc/quantization/fp8_e5m2_kvcache/quant_utils.cuh'
+    Digest:          2b2c3ff24d562c5e496952c0f280a573
+DpctVersion:     2024.0.0
+MainHelperFileName: ''
+USMLevel:        ''
+FeatureMap:      {}
+CompileTargets:  {}
+OptionMap:
+  AnalysisScopePath:
+    Value:           '/home/ubuntu/vllm'
+    Specified:       false
+  AsyncHandler:
+    Value:           'false'
+    Specified:       false
+  CommentsEnabled:
+    Value:           'true'
+    Specified:       true
+  CompilationsDir:
+    Value:           '/home/ubuntu/vllm'
+    Specified:       true
+  CtadEnabled:
+    Value:           'false'
+    Specified:       false
+  EnablepProfiling:
+    Value:           'false'
+    Specified:       false
+  ExperimentalFlag:
+    Value:           '8'
+    Specified:       true
+  ExplicitClNamespace:
+    Value:           'false'
+    Specified:       false
+  ExplicitNamespace:
+    Value:           '20'
+    Specified:       false
+  ExtensionDDFlag:
+    Value:           '0'
+    Specified:       false
+  ExtensionDEFlag:
+    Value:           '4294967295'
+    Specified:       false
+  HelperFuncPreferenceFlag:
+    Value:           '0'
+    Specified:       false
+  NDRangeDim:
+    Value:           '3'
+    Specified:       false
+  NoDRYPattern:
+    Value:           'false'
+    Specified:       false
+  NoUseGenericSpace:
+    Value:           ''
+    Specified:       true
+  OptimizeMigration:
+    Value:           'false'
+    Specified:       false
+  ProcessAll:
+    Value:           'false'
+    Specified:       false
+  RuleFile:
+    Value:           ''
+    Specified:       false
+  SyclNamedLambda:
+    Value:           'false'
+    Specified:       false
+  UsmLevel:
+    Value:           '1'
+    Specified:       false
+...

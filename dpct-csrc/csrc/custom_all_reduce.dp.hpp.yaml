@@ -1,0 +1,1108 @@
+---
+MainSourceFile:  '/home/ubuntu/vllm/dpct-csrc/csrc/custom_all_reduce.dp.hpp'
+Replacements:
+  - FilePath:        '/home/ubuntu/vllm/csrc/custom_all_reduce.cuh'
+    Offset:          14
+    Length:          18
+    ReplacementText: "/* DPCT_ORIG #include <cuda.h>*/\n#include <sycl/sycl.hpp>\n#include <dpct/dpct.hpp>\n"
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/ubuntu/vllm/csrc/custom_all_reduce.cuh'
+    Offset:          32
+    Length:          23
+    ReplacementText: "/* DPCT_ORIG #include <cuda_bf16.h>*/\n"
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/ubuntu/vllm/csrc/custom_all_reduce.cuh'
+    Offset:          55
+    Length:          23
+    ReplacementText: "/* DPCT_ORIG #include <cuda_fp16.h>*/\n"
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/ubuntu/vllm/csrc/custom_all_reduce.cuh'
+    Offset:          78
+    Length:          26
+    ReplacementText: "/* DPCT_ORIG #include <cuda_runtime.h>*/\n"
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/ubuntu/vllm/csrc/custom_all_reduce.cuh'
+    Offset:          202
+    Length:          0
+    ReplacementText: "/*\nDPCT1001:89: The statement could not be removed.\n*/\n/*\nDPCT1000:90: Error handling if-stmt was detected but could not be rewritten.\n*/\n/*\nDPCT1009:92: SYCL uses exceptions to report errors and does not use the error codes. The original code was commented out and a warning string was inserted. You need to rewrite this code.\n*/\n"
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/ubuntu/vllm/csrc/custom_all_reduce.cuh'
+    Offset:          342
+    Length:          0
+    ReplacementText: "/* DPCT_ORIG     cudaError_t e = cmd;                                            \\*/ \\\n"
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/ubuntu/vllm/csrc/custom_all_reduce.cuh'
+    Offset:          346
+    Length:          11
+    ReplacementText: 'dpct::err0'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/ubuntu/vllm/csrc/custom_all_reduce.cuh'
+    Offset:          412
+    Length:          0
+    ReplacementText: "/* DPCT_ORIG     if (e != cudaSuccess) {                                         \\*/ \\\n"
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/ubuntu/vllm/csrc/custom_all_reduce.cuh'
+    Offset:          425
+    Length:          11
+    ReplacementText: '0'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/ubuntu/vllm/csrc/custom_all_reduce.cuh'
+    Offset:          552
+    Length:          0
+    ReplacementText: "/* DPCT_ORIG              cudaGetErrorString(e));                                \\*/ \\\n"
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/ubuntu/vllm/csrc/custom_all_reduce.cuh'
+    Offset:          565
+    Length:          21
+    ReplacementText: '"cudaGetErrorString is not supported"/*cudaGetErrorString(e)*/'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/ubuntu/vllm/csrc/custom_all_reduce.cuh'
+    Offset:          1138
+    Length:          0
+    ReplacementText: "/* DPCT_ORIG struct __align__(16) RankData { const void *__restrict__ ptrs[8]; };*/\n"
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/ubuntu/vllm/csrc/custom_all_reduce.cuh'
+    Offset:          1145
+    Length:          9
+    ReplacementText: __dpct_align__
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/ubuntu/vllm/csrc/custom_all_reduce.cuh'
+    Offset:          1326
+    Length:          0
+    ReplacementText: "/* DPCT_ORIG struct __align__(alignof(T) * sz) array_t {*/\n"
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/ubuntu/vllm/csrc/custom_all_reduce.cuh'
+    Offset:          1333
+    Length:          9
+    ReplacementText: __dpct_align__
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/ubuntu/vllm/csrc/custom_all_reduce.cuh'
+    Offset:          1746
+    Length:          0
+    ReplacementText: "/* DPCT_ORIG #define DINLINE __device__ __forceinline__*/\n"
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/ubuntu/vllm/csrc/custom_all_reduce.cuh'
+    Offset:          1762
+    Length:          11
+    ReplacementText: ''
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/ubuntu/vllm/csrc/custom_all_reduce.cuh'
+    Offset:          1773
+    Length:          15
+    ReplacementText: __dpct_inline__
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/ubuntu/vllm/csrc/custom_all_reduce.cuh'
+    Offset:          1815
+    Length:          0
+    ReplacementText: "/* DPCT_ORIG DINLINE float upcast_s(half val) { return __half2float(val); }*/\n"
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/ubuntu/vllm/csrc/custom_all_reduce.cuh'
+    Offset:          1838
+    Length:          4
+    ReplacementText: 'sycl::half'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/ubuntu/vllm/csrc/custom_all_reduce.cuh'
+    Offset:          1857
+    Length:          17
+    ReplacementText: 'sycl::vec<sycl::half, 1>{val}.convert<float, sycl::rounding_mode::automatic>()[0]'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/ubuntu/vllm/csrc/custom_all_reduce.cuh'
+    Offset:          1934
+    Length:          0
+    ReplacementText: "/* DPCT_ORIG template <>\nDINLINE half downcast_s(float val) {*/\n"
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/ubuntu/vllm/csrc/custom_all_reduce.cuh'
+    Offset:          1954
+    Length:          4
+    ReplacementText: 'sycl::half'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/ubuntu/vllm/csrc/custom_all_reduce.cuh'
+    Offset:          1983
+    Length:          0
+    ReplacementText: "/* DPCT_ORIG   return __float2half(val);*/\n"
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/ubuntu/vllm/csrc/custom_all_reduce.cuh'
+    Offset:          1992
+    Length:          17
+    ReplacementText: 'sycl::vec<float, 1>{val}.convert<sycl::half, sycl::rounding_mode::automatic>()[0]'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/ubuntu/vllm/csrc/custom_all_reduce.cuh'
+    Offset:          2171
+    Length:          0
+    ReplacementText: "/* DPCT_ORIG DINLINE half &assign_add(half &a, half b) {*/\n"
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/ubuntu/vllm/csrc/custom_all_reduce.cuh'
+    Offset:          2179
+    Length:          4
+    ReplacementText: 'sycl::half'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/ubuntu/vllm/csrc/custom_all_reduce.cuh'
+    Offset:          2196
+    Length:          4
+    ReplacementText: 'sycl::half'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/ubuntu/vllm/csrc/custom_all_reduce.cuh'
+    Offset:          2205
+    Length:          4
+    ReplacementText: 'sycl::half'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/ubuntu/vllm/csrc/custom_all_reduce.cuh'
+    Offset:          2215
+    Length:          0
+    ReplacementText: "/* DPCT_ORIG   a = __hadd(a, b);*/\n"
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/ubuntu/vllm/csrc/custom_all_reduce.cuh'
+    Offset:          2221
+    Length:          12
+    ReplacementText: 'a + b'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/ubuntu/vllm/csrc/custom_all_reduce.cuh'
+    Offset:          2314
+    Length:          0
+    ReplacementText: "/* DPCT_ORIG #if (__CUDA_ARCH__ >= 800 || !defined(__CUDA_ARCH__))*/\n"
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/ubuntu/vllm/csrc/custom_all_reduce.cuh'
+    Offset:          2319
+    Length:          13
+    ReplacementText: DPCT_COMPATIBILITY_TEMP
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/ubuntu/vllm/csrc/custom_all_reduce.cuh'
+    Offset:          2352
+    Length:          13
+    ReplacementText: DPCT_COMPATIBILITY_TEMP
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/ubuntu/vllm/csrc/custom_all_reduce.cuh'
+    Offset:          3510
+    Length:          9
+    ReplacementText: "/* DPCT_ORIG __host__ __device__ constexpr uint64_t compute_flag(int ngpus) {*/\n"
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/ubuntu/vllm/csrc/custom_all_reduce.cuh'
+    Offset:          3519
+    Length:          11
+    ReplacementText: ''
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/ubuntu/vllm/csrc/custom_all_reduce.cuh'
+    Offset:          3785
+    Length:          0
+    ReplacementText: ', const sycl::nd_item<3> &item_ct1'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/ubuntu/vllm/csrc/custom_all_reduce.cuh'
+    Offset:          3834
+    Length:          0
+    ReplacementText: "/* DPCT_ORIG   if (blockIdx.x == 0) {*/\n"
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/ubuntu/vllm/csrc/custom_all_reduce.cuh'
+    Offset:          3840
+    Length:          10
+    ReplacementText: 'item_ct1.get_group(2)'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/ubuntu/vllm/csrc/custom_all_reduce.cuh'
+    Offset:          3859
+    Length:          0
+    ReplacementText: "/* DPCT_ORIG     if (threadIdx.x < ngpus)*/\n"
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/ubuntu/vllm/csrc/custom_all_reduce.cuh'
+    Offset:          3867
+    Length:          11
+    ReplacementText: 'item_ct1.get_local_id(2)'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/ubuntu/vllm/csrc/custom_all_reduce.cuh'
+    Offset:          3995
+    Length:          0
+    ReplacementText: "/* DPCT_ORIG       sg.signals[threadIdx.x]->start.data[rank] = 255;*/\n"
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/ubuntu/vllm/csrc/custom_all_reduce.cuh'
+    Offset:          4012
+    Length:          11
+    ReplacementText: 'item_ct1.get_local_id(2)'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/ubuntu/vllm/csrc/custom_all_reduce.cuh'
+    Offset:          4050
+    Length:          0
+    ReplacementText: "/* DPCT_ORIG     else if (threadIdx.x == 32)*/\n"
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/ubuntu/vllm/csrc/custom_all_reduce.cuh'
+    Offset:          4063
+    Length:          11
+    ReplacementText: 'item_ct1.get_local_id(2)'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/ubuntu/vllm/csrc/custom_all_reduce.cuh'
+    Offset:          4130
+    Length:          0
+    ReplacementText: "/* DPCT_ORIG   if (threadIdx.x == 0) {*/\n"
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/ubuntu/vllm/csrc/custom_all_reduce.cuh'
+    Offset:          4136
+    Length:          11
+    ReplacementText: 'item_ct1.get_local_id(2)'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/ubuntu/vllm/csrc/custom_all_reduce.cuh'
+    Offset:          4208
+    Length:          0
+    ReplacementText: "/* DPCT_ORIG   __syncthreads();*/\n"
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/ubuntu/vllm/csrc/custom_all_reduce.cuh'
+    Offset:          4210
+    Length:          15
+    ReplacementText: "/*\n  DPCT1065:85: Consider replacing sycl::nd_item::barrier() with sycl::nd_item::barrier(sycl::access::fence_space::local_space) for better performance if there is no access to global memory.\n  */\n  item_ct1.barrier()"
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/ubuntu/vllm/csrc/custom_all_reduce.cuh'
+    Offset:          4376
+    Length:          0
+    ReplacementText: ', const sycl::nd_item<3> &item_ct1, int &num'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/ubuntu/vllm/csrc/custom_all_reduce.cuh'
+    Offset:          4425
+    Length:          0
+    ReplacementText: "/* DPCT_ORIG   __syncthreads();*/\n"
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/ubuntu/vllm/csrc/custom_all_reduce.cuh'
+    Offset:          4427
+    Length:          15
+    ReplacementText: "/*\n  DPCT1065:86: Consider replacing sycl::nd_item::barrier() with sycl::nd_item::barrier(sycl::access::fence_space::local_space) for better performance if there is no access to global memory.\n  */\n  item_ct1.barrier()"
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/ubuntu/vllm/csrc/custom_all_reduce.cuh'
+    Offset:          4444
+    Length:          0
+    ReplacementText: "/* DPCT_ORIG   __shared__ int num;*/\n"
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/ubuntu/vllm/csrc/custom_all_reduce.cuh'
+    Offset:          4446
+    Length:          19
+    ReplacementText: ''
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/ubuntu/vllm/csrc/custom_all_reduce.cuh'
+    Offset:          4466
+    Length:          0
+    ReplacementText: "/* DPCT_ORIG   if (threadIdx.x == 0) num = atomicAdd((int *)&meta->counter, 1);*/\n"
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/ubuntu/vllm/csrc/custom_all_reduce.cuh'
+    Offset:          4472
+    Length:          11
+    ReplacementText: 'item_ct1.get_local_id(2)'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/ubuntu/vllm/csrc/custom_all_reduce.cuh'
+    Offset:          4496
+    Length:          35
+    ReplacementText: 'dpct::atomic_fetch_add<sycl::access::address_space::generic_space>((int *)&meta->counter, 1)'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/ubuntu/vllm/csrc/custom_all_reduce.cuh'
+    Offset:          4533
+    Length:          0
+    ReplacementText: "/* DPCT_ORIG   __syncthreads();*/\n"
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/ubuntu/vllm/csrc/custom_all_reduce.cuh'
+    Offset:          4535
+    Length:          15
+    ReplacementText: "/*\n  DPCT1065:87: Consider replacing sycl::nd_item::barrier() with sycl::nd_item::barrier(sycl::access::fence_space::local_space) for better performance if there is no access to global memory.\n  */\n  item_ct1.barrier()"
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/ubuntu/vllm/csrc/custom_all_reduce.cuh'
+    Offset:          4741
+    Length:          0
+    ReplacementText: "/* DPCT_ORIG   if (num == gridDim.x - 1) {*/\n"
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/ubuntu/vllm/csrc/custom_all_reduce.cuh'
+    Offset:          4754
+    Length:          9
+    ReplacementText: 'item_ct1.get_group_range(2)'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/ubuntu/vllm/csrc/custom_all_reduce.cuh'
+    Offset:          4771
+    Length:          0
+    ReplacementText: "/* DPCT_ORIG     if (threadIdx.x == 32) {*/\n"
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/ubuntu/vllm/csrc/custom_all_reduce.cuh'
+    Offset:          4779
+    Length:          11
+    ReplacementText: 'item_ct1.get_local_id(2)'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/ubuntu/vllm/csrc/custom_all_reduce.cuh'
+    Offset:          4891
+    Length:          0
+    ReplacementText: "/* DPCT_ORIG     } else if (threadIdx.x < ngpus) {*/\n"
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/ubuntu/vllm/csrc/custom_all_reduce.cuh'
+    Offset:          4906
+    Length:          11
+    ReplacementText: 'item_ct1.get_local_id(2)'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/ubuntu/vllm/csrc/custom_all_reduce.cuh'
+    Offset:          5036
+    Length:          0
+    ReplacementText: "/* DPCT_ORIG       sg.signals[threadIdx.x]->end.data[rank] = 255;*/\n"
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/ubuntu/vllm/csrc/custom_all_reduce.cuh'
+    Offset:          5053
+    Length:          11
+    ReplacementText: 'item_ct1.get_local_id(2)'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/ubuntu/vllm/csrc/custom_all_reduce.cuh'
+    Offset:          5230
+    Length:          0
+    ReplacementText: "/* DPCT_ORIG       if (threadIdx.x == 0) {*/\n"
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/ubuntu/vllm/csrc/custom_all_reduce.cuh'
+    Offset:          5240
+    Length:          11
+    ReplacementText: 'item_ct1.get_local_id(2)'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/ubuntu/vllm/csrc/custom_all_reduce.cuh'
+    Offset:          5363
+    Length:          0
+    ReplacementText: "/* DPCT_ORIG     if (threadIdx.x == 0) {*/\n"
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/ubuntu/vllm/csrc/custom_all_reduce.cuh'
+    Offset:          5371
+    Length:          11
+    ReplacementText: 'item_ct1.get_local_id(2)'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/ubuntu/vllm/csrc/custom_all_reduce.cuh'
+    Offset:          5447
+    Length:          0
+    ReplacementText: "/* DPCT_ORIG     __syncthreads();*/\n"
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/ubuntu/vllm/csrc/custom_all_reduce.cuh'
+    Offset:          5451
+    Length:          15
+    ReplacementText: "/*\n    DPCT1065:88: Consider replacing sycl::nd_item::barrier() with sycl::nd_item::barrier(sycl::access::fence_space::local_space) for better performance if there is no access to global memory.\n    */\n    item_ct1.barrier()"
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/ubuntu/vllm/csrc/custom_all_reduce.cuh'
+    Offset:          5739
+    Length:          0
+    ReplacementText: "/* DPCT_ORIG template <typename T, int ngpus>\n__global__ void __launch_bounds__(512, 1)\n    cross_device_reduce_1stage(RankData *_dp, RankSignals sg,\n                               volatile Metadata *meta, T *__restrict__ result,\n                               int rank, int size) {*/\n"
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/ubuntu/vllm/csrc/custom_all_reduce.cuh'
+    Offset:          5772
+    Length:          11
+    ReplacementText: ''
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/ubuntu/vllm/csrc/custom_all_reduce.cuh'
+    Offset:          5788
+    Length:          25
+    ReplacementText: ''
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/ubuntu/vllm/csrc/custom_all_reduce.cuh'
+    Offset:          6005
+    Length:          0
+    ReplacementText: ",\n                               const sycl::nd_item<3> &item_ct1, int &num"
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/ubuntu/vllm/csrc/custom_all_reduce.cuh'
+    Offset:          6268
+    Length:          0
+    ReplacementText: ', item_ct1'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/ubuntu/vllm/csrc/custom_all_reduce.cuh'
+    Offset:          6300
+    Length:          0
+    ReplacementText: "/* DPCT_ORIG   for (int idx = blockIdx.x * blockDim.x + threadIdx.x; idx < size;*/\n"
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/ubuntu/vllm/csrc/custom_all_reduce.cuh'
+    Offset:          6317
+    Length:          10
+    ReplacementText: 'item_ct1.get_group(2)'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/ubuntu/vllm/csrc/custom_all_reduce.cuh'
+    Offset:          6330
+    Length:          10
+    ReplacementText: 'item_ct1.get_local_range(2)'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/ubuntu/vllm/csrc/custom_all_reduce.cuh'
+    Offset:          6343
+    Length:          11
+    ReplacementText: 'item_ct1.get_local_id(2)'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/ubuntu/vllm/csrc/custom_all_reduce.cuh'
+    Offset:          6368
+    Length:          0
+    ReplacementText: "/* DPCT_ORIG        idx += gridDim.x * blockDim.x) {*/\n"
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/ubuntu/vllm/csrc/custom_all_reduce.cuh'
+    Offset:          6382
+    Length:          9
+    ReplacementText: 'item_ct1.get_group_range(2)'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/ubuntu/vllm/csrc/custom_all_reduce.cuh'
+    Offset:          6394
+    Length:          10
+    ReplacementText: 'item_ct1.get_local_range(2)'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/ubuntu/vllm/csrc/custom_all_reduce.cuh'
+    Offset:          6541
+    Length:          0
+    ReplacementText: ', item_ct1, num'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/ubuntu/vllm/csrc/custom_all_reduce.cuh'
+    Offset:          6656
+    Length:          0
+    ReplacementText: "/* DPCT_ORIG template <typename T, int ngpus>\n__global__ void __launch_bounds__(512, 1)\n    cross_device_reduce_2stage(RankData *_dp, RankSignals sg,\n                               volatile Metadata *meta, T *__restrict__ result,\n                               int rank, int size) {*/\n"
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/ubuntu/vllm/csrc/custom_all_reduce.cuh'
+    Offset:          6689
+    Length:          11
+    ReplacementText: ''
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/ubuntu/vllm/csrc/custom_all_reduce.cuh'
+    Offset:          6705
+    Length:          25
+    ReplacementText: ''
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/ubuntu/vllm/csrc/custom_all_reduce.cuh'
+    Offset:          6922
+    Length:          0
+    ReplacementText: ",\n                               const sycl::nd_item<3> &item_ct1, int &num"
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/ubuntu/vllm/csrc/custom_all_reduce.cuh'
+    Offset:          6926
+    Length:          0
+    ReplacementText: "/* DPCT_ORIG   int tid = blockIdx.x * blockDim.x + threadIdx.x;*/\n"
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/ubuntu/vllm/csrc/custom_all_reduce.cuh'
+    Offset:          6938
+    Length:          10
+    ReplacementText: 'item_ct1.get_group(2)'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/ubuntu/vllm/csrc/custom_all_reduce.cuh'
+    Offset:          6951
+    Length:          10
+    ReplacementText: 'item_ct1.get_local_range(2)'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/ubuntu/vllm/csrc/custom_all_reduce.cuh'
+    Offset:          6964
+    Length:          11
+    ReplacementText: 'item_ct1.get_local_id(2)'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/ubuntu/vllm/csrc/custom_all_reduce.cuh'
+    Offset:          6977
+    Length:          0
+    ReplacementText: "/* DPCT_ORIG   int stride = gridDim.x * blockDim.x;*/\n"
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/ubuntu/vllm/csrc/custom_all_reduce.cuh'
+    Offset:          6992
+    Length:          9
+    ReplacementText: 'item_ct1.get_group_range(2)'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/ubuntu/vllm/csrc/custom_all_reduce.cuh'
+    Offset:          7004
+    Length:          10
+    ReplacementText: 'item_ct1.get_local_range(2)'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/ubuntu/vllm/csrc/custom_all_reduce.cuh'
+    Offset:          7485
+    Length:          0
+    ReplacementText: ', item_ct1'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/ubuntu/vllm/csrc/custom_all_reduce.cuh'
+    Offset:          7783
+    Length:          0
+    ReplacementText: ', item_ct1, num'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/ubuntu/vllm/csrc/custom_all_reduce.cuh'
+    Offset:          8498
+    Length:          0
+    ReplacementText: "/* DPCT_ORIG template <typename T, int ngpus>\n__global__ void __launch_bounds__(512, 1)\n    cross_device_reduce_half_butterfly(RankData *_dp, RankSignals sg,\n                                       volatile Metadata *meta,\n                                       T *__restrict__ result, int rank,\n                                       int size) {*/\n"
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/ubuntu/vllm/csrc/custom_all_reduce.cuh'
+    Offset:          8531
+    Length:          11
+    ReplacementText: ''
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/ubuntu/vllm/csrc/custom_all_reduce.cuh'
+    Offset:          8547
+    Length:          25
+    ReplacementText: ''
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/ubuntu/vllm/csrc/custom_all_reduce.cuh'
+    Offset:          8827
+    Length:          0
+    ReplacementText: ",\n                                       const sycl::nd_item<3> &item_ct1,\n                                       int &num"
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/ubuntu/vllm/csrc/custom_all_reduce.cuh'
+    Offset:          8831
+    Length:          0
+    ReplacementText: "/* DPCT_ORIG   int tid = blockIdx.x * blockDim.x + threadIdx.x;*/\n"
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/ubuntu/vllm/csrc/custom_all_reduce.cuh'
+    Offset:          8843
+    Length:          10
+    ReplacementText: 'item_ct1.get_group(2)'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/ubuntu/vllm/csrc/custom_all_reduce.cuh'
+    Offset:          8856
+    Length:          10
+    ReplacementText: 'item_ct1.get_local_range(2)'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/ubuntu/vllm/csrc/custom_all_reduce.cuh'
+    Offset:          8869
+    Length:          11
+    ReplacementText: 'item_ct1.get_local_id(2)'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/ubuntu/vllm/csrc/custom_all_reduce.cuh'
+    Offset:          8882
+    Length:          0
+    ReplacementText: "/* DPCT_ORIG   int stride = gridDim.x * blockDim.x;*/\n"
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/ubuntu/vllm/csrc/custom_all_reduce.cuh'
+    Offset:          8897
+    Length:          9
+    ReplacementText: 'item_ct1.get_group_range(2)'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/ubuntu/vllm/csrc/custom_all_reduce.cuh'
+    Offset:          8909
+    Length:          10
+    ReplacementText: 'item_ct1.get_local_range(2)'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/ubuntu/vllm/csrc/custom_all_reduce.cuh'
+    Offset:          9531
+    Length:          0
+    ReplacementText: ', item_ct1'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/ubuntu/vllm/csrc/custom_all_reduce.cuh'
+    Offset:          9676
+    Length:          0
+    ReplacementText: ', item_ct1, num'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/ubuntu/vllm/csrc/custom_all_reduce.cuh'
+    Offset:          11787
+    Length:          0
+    ReplacementText: ' try '
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/ubuntu/vllm/csrc/custom_all_reduce.cuh'
+    Offset:          11926
+    Length:          0
+    ReplacementText: "      /*\n      DPCT1030:91: SYCL currently does not support inter-process communication (IPC) operations. You may need to rewrite the code.\n      */\n"
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/ubuntu/vllm/csrc/custom_all_reduce.cuh'
+    Offset:          12193
+    Length:          0
+    ReplacementText: "\n  catch (sycl::exception const &exc) {\n    std::cerr << exc.what() << \"Exception caught at file:\" << __FILE__ << \", line:\" << __LINE__ << std::endl;\n    std::exit(1);\n  }"
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+MainSourceFilesDigest:
+  - MainSourceFile:  '/home/ubuntu/vllm/csrc/custom_all_reduce.cuh'
+    Digest:          6abb498c17e372d1d7d16a7315540a17
+DpctVersion:     2024.0.0
+MainHelperFileName: ''
+USMLevel:        ''
+FeatureMap:      {}
+CompileTargets:  {}
+OptionMap:
+  AnalysisScopePath:
+    Value:           '/home/ubuntu/vllm'
+    Specified:       false
+  AsyncHandler:
+    Value:           'false'
+    Specified:       false
+  CommentsEnabled:
+    Value:           'true'
+    Specified:       true
+  CompilationsDir:
+    Value:           '/home/ubuntu/vllm'
+    Specified:       true
+  CtadEnabled:
+    Value:           'false'
+    Specified:       false
+  EnablepProfiling:
+    Value:           'false'
+    Specified:       false
+  ExperimentalFlag:
+    Value:           '8'
+    Specified:       true
+  ExplicitClNamespace:
+    Value:           'false'
+    Specified:       false
+  ExplicitNamespace:
+    Value:           '20'
+    Specified:       false
+  ExtensionDDFlag:
+    Value:           '0'
+    Specified:       false
+  ExtensionDEFlag:
+    Value:           '4294967295'
+    Specified:       false
+  HelperFuncPreferenceFlag:
+    Value:           '0'
+    Specified:       false
+  NDRangeDim:
+    Value:           '3'
+    Specified:       false
+  NoDRYPattern:
+    Value:           'false'
+    Specified:       false
+  NoUseGenericSpace:
+    Value:           ''
+    Specified:       true
+  OptimizeMigration:
+    Value:           'false'
+    Specified:       false
+  ProcessAll:
+    Value:           'false'
+    Specified:       false
+  RuleFile:
+    Value:           ''
+    Specified:       false
+  SyclNamedLambda:
+    Value:           'false'
+    Specified:       false
+  UsmLevel:
+    Value:           '1'
+    Specified:       false
+...
